@@ -1,105 +1,461 @@
+// ========================================
+
+// ARRAY DE JOGOS DA COPA DO MUNDO 2026
+
+// ========================================
+
+// Cada objeto contém:
+
+// - data: data do jogo (formato DD/MM/YYYY)
+
+// - time1/time2: nomes dos times
+
+// - image1/image2: URLs das bandeiras dos países
+
+// - score1/score2: placar do jogo (? = ainda não definido)
+
+// - saibaMais1/saibaMais2: links para Wikipedia dos países
+
+// ========================================
+
+
+
+
+
 const jogos = [
-    { data: "18/06/2026", time1: "África do Sul", saibaMais1: "https://en.wikipedia.org/wiki/South_Africa", image1: "https://www.bandeirasnacionais.com/data/flags/w580/za.webp", score1: "?", time2: "República Tcheca", saibaMais2: "https://pt.wikipedia.org/wiki/Ch%C3%A9quia", image2: "https://www.bandeirasnacionais.com/data/flags/w580/cz.webp", score2: "?" },
 
-    { data: "18/06/2026", time1: "México", saibaMais1: "https://pt.wikipedia.org/wiki/M%C3%A9xico", image1: "https://www.bandeirasnacionais.com/data/flags/w580/mx.webp", score1: "?", time2: "Coreia do Sul", saibaMais2: "https://pt.wikipedia.org/wiki/Coreia_do_Sul", image2: "https://www.bandeirasnacionais.com/data/flags/w580/kr.webp", score2: "?" },
+    // Jogos de 11/06/2026 - Primeira data
 
-    { data: "18/06/2026", time1: "Canadá", saibaMais1: "https://pt.wikipedia.org/wiki/Canad%C3%A1", image1: "https://www.bandeirasnacionais.com/data/flags/w580/ca.webp", score1: "?", time2: "Catar", saibaMais2: "https://pt.wikipedia.org/wiki/Catar", image2: "https://www.bandeirasnacionais.com/data/flags/w580/qa.webp", score2: "?" },
+    { data: "11/06/2026", time1: "México", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Mexicana_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/mx.png", score1: "?", time2: "África do Sul", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Sul-Africana_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/za.png", score2: "?" },
 
-    { data: "18/06/2026", time1: "Suíça", saibaMais1: "https://pt.wikipedia.org/wiki/Su%C3%AD%C3%A7a", image1: "https://www.bandeirasnacionais.com/data/flags/w580/ch.webp", score1: "?", time2: "Bósnia e Herzegovina", saibaMais2: "https://pt.wikipedia.org/wiki/B%C3%B3snia_e_Herzegovina", image2: "https://www.bandeirasnacionais.com/data/flags/w580/ba.webp", score2: "?" },
+    { data: "11/06/2026", time1: "Coreia do Sul", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Sul-Coreana_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/kr.png", score1: "?", time2: "Repescagem Europeia D", saibaMais2: "", image2: "https://coc.ufpa.br/coc/javax.faces.resource/ajax_loading.gif.jsf?ln=icones", score2: "?" },
 
-    { data: "19/06/2026", time1: "Brasil", saibaMais1: "https://pt.wikipedia.org/wiki/Brasil", image1: "https://www.bandeirasnacionais.com/data/flags/w580/br.webp", score1: "?", time2: "Escócia", saibaMais2: "https://pt.wikipedia.org/wiki/Esc%C3%B3cia", image2: "https://www.bandeirasnacionais.com/data/flags/w580/gb-sct.webp", score2: "?" },
 
-    { data: "19/06/2026", time1: "Marrocos", saibaMais1: "https://pt.wikipedia.org/wiki/Marrocos", image1: "https://www.bandeirasnacionais.com/data/flags/w580/ma.webp", score1: "?", time2: "Haiti", saibaMais2: "https://pt.wikipedia.org/wiki/Haiti", image2: "https://www.bandeirasnacionais.com/data/flags/w580/ht.webp", score2: "?" },
 
-    { data: "19/06/2026", time1: "Estados Unidos", saibaMais1: "https://pt.wikipedia.org/wiki/Estados_Unidos", image1: "https://www.bandeirasnacionais.com/data/flags/w580/us.webp", score1: "?", time2: "Paraguai", saibaMais2: "https://pt.wikipedia.org/wiki/Paraguai", image2: "https://www.bandeirasnacionais.com/data/flags/w580/py.webp", score2: "?" },
+    // 12/06/2026
 
-    { data: "20/06/2026", time1: "Alemanha", saibaMais1: "https://pt.wikipedia.org/wiki/Alemanha", image1: "https://www.bandeirasnacionais.com/data/flags/w580/de.webp", score1: "?", time2: "Equador", saibaMais2: "https://pt.wikipedia.org/wiki/Equador", image2: "https://www.bandeirasnacionais.com/data/flags/w580/ec.webp", score2: "?" },
+    { data: "12/06/2026", time1: "Canadá", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Canadense_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/ca.png", score1: "?", time2: "Repescagem Europeia A", saibaMais2: "", image2: "https://coc.ufpa.br/coc/javax.faces.resource/ajax_loading.gif.jsf?ln=icones", score2: "?" },
 
-    { data: "20/06/2026", time1: "Costa do Marfim", saibaMais1: "https://pt.wikipedia.org/wiki/Costa_do_Marfim", image1: "https://www.bandeirasnacionais.com/data/flags/w580/ci.webp", score1: "?", time2: "Curaçao", saibaMais2: "https://pt.wikipedia.org/wiki/Cura%C3%A7au", image2: "https://www.bandeirasnacionais.com/data/flags/w580/cw.webp", score2: "?" },
+    { data: "12/06/2026", time1: "EUA", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_放_Unidenses_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/us.png", score1: "?", time2: "Paraguai", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Paraguaia_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/py.png", score2: "?" },
 
-    { data: "20/06/2026", time1: "Holanda", saibaMais1: "https://pt.wikipedia.org/wiki/Pa%C3%ADses_Baixos", image1: "https://www.bandeirasnacionais.com/data/flags/w580/nl.webp", score1: "?", time2: "Japão", saibaMais2: "https://pt.wikipedia.org/wiki/Jap%C3%A3o", image2: "https://www.bandeirasnacionais.com/data/flags/w580/jp.webp", score2: "?" },
 
-    { data: "20/06/2026", time1: "Suécia", saibaMais1: "https://pt.wikipedia.org/wiki/Su%C3%A9cia", image1: "https://www.bandeirasnacionais.com/data/flags/w580/se.webp", score1: "?", time2: "Tunísia", saibaMais2: "https://pt.wikipedia.org/wiki/Tun%C3%ADsia", image2: "https://www.bandeirasnacionais.com/data/flags/w580/tn.webp", score2: "?" },
 
-    { data: "21/06/2026", time1: "Bélgica", saibaMais1: "https://pt.wikipedia.org/wiki/B%C3%A9lgica", image1: "https://www.bandeirasnacionais.com/data/flags/w580/be.webp", score1: "?", time2: "Egito", saibaMais2: "https://pt.wikipedia.org/wiki/Egito", image2: "https://www.bandeirasnacionais.com/data/flags/w580/eg.webp", score2: "?" },
+    // 13/06/2026
 
-    { data: "21/06/2026", time1: "Irã", saibaMais1: "https://pt.wikipedia.org/wiki/Ir%C3%A3", image1: "https://www.bandeirasnacionais.com/data/flags/w580/ir.webp", score1: "?", time2: "Nova Zelândia", saibaMais2: "https://pt.wikipedia.org/wiki/Nova_Zel%C3%A2ndia", image2: "https://www.bandeirasnacionais.com/data/flags/w580/nz.webp", score2: "?" },
+    { data: "13/06/2026", time1: "Brasil", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Brasileira_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/br.png", score1: "?", time2: "Marrocos", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Marroquina_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/ma.png", score2: "?" },
 
-    { data: "21/06/2026", time1: "Espanha", saibaMais1: "https://pt.wikipedia.org/wiki/Espanha", image1: "https://www.bandeirasnacionais.com/data/flags/w580/es.webp", score1: "?", time2: "Uruguai", saibaMais2: "https://pt.wikipedia.org/wiki/Uruguai", image2: "https://www.bandeirasnacionais.com/data/flags/w580/uy.webp", score2: "?" },
+    { data: "13/06/2026", time1: "Catar", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Catarense_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/qa.png", score1: "?", time2: "Suíça", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Su%C3%AD%C3%A7a_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/ch.png", score2: "?" },
 
-    { data: "21/06/2026", time1: "Arábia Saudita", saibaMais1: "https://pt.wikipedia.org/wiki/Ar%C3%A1bia_Saudita", image1: "https://www.bandeirasnacionais.com/data/flags/w580/sa.webp", score1: "?", time2: "Cabo Verde", saibaMais2: "https://pt.wikipedia.org/wiki/Cabo_Verde", image2: "https://www.bandeirasnacionais.com/data/flags/w580/cv.webp", score2: "?" }
+    { data: "13/06/2026", time1: "Haiti", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Haitiana_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/ht.png", score1: "?", time2: "Escócia", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Escocesa_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/gb-sct.png", score2: "?" },
+
+    { data: "13/06/2026", time1: "Austrália", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Australiana_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/au.png", score1: "?", time2: "Repescagem Europeia C", saibaMais2: "", image2: "https://coc.ufpa.br/coc/javax.faces.resource/ajax_loading.gif.jsf?ln=icones", score2: "?" },
+
+
+
+    // 14/06/2026
+
+    { data: "14/06/2026", time1: "Alemanha", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Alem%C3%A3_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/de.png", score1: "?", time2: "Curaçau", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Cura%C3%A7auense_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/cw.png", score2: "?" },
+
+    { data: "14/06/2026", time1: "Holanda", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Neerlandesa_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/nl.png", score1: "?", time2: "Japão", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Japonesa_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/jp.png", score2: "?" },
+
+    { data: "14/06/2026", time1: "Costa do Marfim", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Mofinesa_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/ci.png", score1: "?", time2: "Equador", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Equadoriana_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/ec.png", score2: "?" },
+
+    { data: "14/06/2026", time1: "Repescagem Europeia B", saibaMais1: "", image1: "https://coc.ufpa.br/coc/javax.faces.resource/ajax_loading.gif.jsf?ln=icones", score1: "?", time2: "Tunísia", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Tunisiana_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/tn.png", score2: "?" },
+
+
+
+    // 15/06/2026
+
+    { data: "15/06/2026", time1: "Espanha", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Espanhola_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/es.png", score1: "?", time2: "Cabo Verde", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Caboverdiana_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/cv.png", score2: "?" },
+
+    { data: "15/06/2026", time1: "Bélgica", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Belga_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/be.png", score1: "?", time2: "Egito", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Eg%C3%ADpcia_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/eg.png", score2: "?" },
+
+    { data: "15/06/2026", time1: "Arábia Saudita", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Saudita_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/sa.png", score1: "?", time2: "Uruguai", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Uruguaia_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/uy.png", score2: "?" },
+
+    { data: "15/06/2026", time1: "Irã", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Iraniana_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/ir.png", score1: "?", time2: "Nova Zelândia", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Neozelandesa_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/nz.png", score2: "?" },
+
+
+
+    // 16/06/2026
+
+    { data: "16/06/2026", time1: "França", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Francesa_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/fr.png", score1: "?", time2: "Senegal", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Senegalesa_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/sn.png", score2: "?" },
+
+    { data: "16/06/2026", time1: "Repescagem Mundial 2", saibaMais1: "", image1: "https://coc.ufpa.br/coc/javax.faces.resource/ajax_loading.gif.jsf?ln=icones", score1: "?", time2: "Noruega", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Norueguesa_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/no.png", score2: "?" },
+
+    { data: "16/06/2026", time1: "Argentina", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Argentina_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/ar.png", score1: "?", time2: "Argélia", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Argelina_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/dz.png", score2: "?" },
+
+    { data: "16/06/2026", time1: "Áustria", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Austr%C3%ADaca_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/at.png", score1: "?", time2: "Jordânia", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Jordaniana_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/jo.png", score2: "?" },
+
+
+
+    // 17/06/2026
+
+    { data: "17/06/2026", time1: "Portugal", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Portuguesa_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/pt.png", score1: "?", time2: "Repescagem Mundial 1", saibaMais2: "", image2: "https://coc.ufpa.br/coc/javax.faces.resource/ajax_loading.gif.jsf?ln=icones", score2: "?" },
+
+    { data: "17/06/2026", time1: "Inglaterra", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Inglesa_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/gb-eng.png", score1: "?", time2: "Croácia", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Croata_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/hr.png", score2: "?" },
+
+    { data: "17/06/2026", time1: "Gana", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Ganesa_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/gh.png", score1: "?", time2: "Panamá", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Panamenha_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/pa.png", score2: "?" },
+
+    { data: "17/06/2026", time1: "Uzbequistão", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Uzbeque_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/uz.png", score1: "?", time2: "Colômbia", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Colombiana_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/co.png", score2: "?" },
+
+
+
+    // --- 2ª RODADA (Repetição dos links já definidos) ---
+
+    { data: "18/06/2026", time1: "México", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Mexicana_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/mx.png", score1: "?", time2: "Coreia do Sul", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Sul-Coreana_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/kr.png", score2: "?" },
+
+    { data: "18/06/2026", time1: "África do Sul", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Sul-Africana_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/za.png", score1: "?", time2: "Repescagem Europeia D", saibaMais2: "", image2: "https://coc.ufpa.br/coc/javax.faces.resource/ajax_loading.gif.jsf?ln=icones", score2: "?" },
+
+
+
+    { data: "19/06/2026", time1: "Canadá", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Canadense_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/ca.png", score1: "?", time2: "EUA", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_放_Unidenses_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/us.png", score2: "?" },
+
+    { data: "20/06/2026", time1: "Brasil", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Brasileira_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/br.png", score1: "?", time2: "Catar", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Catarense_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/qa.png", score2: "?" },
+
+
+
+    { data: "21/06/2026", time1: "Alemanha", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Alem%C3%A3_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/de.png", score1: "?", time2: "Holanda", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Neerlandesa_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/nl.png", score2: "?" },
+
+    { data: "22/06/2026", time1: "Espanha", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Espanhola_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/es.png", score1: "?", time2: "Bélgica", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Belga_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/be.png", score2: "?" },
+
+
+
+    { data: "23/06/2026", time1: "França", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Francesa_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/fr.png", score1: "?", time2: "Argentina", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Argentina_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/ar.png", score2: "?" },
+
+
+
+    // --- 3ª RODADA (Decisões) ---
+
+    { data: "24/06/2026", time1: "México", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Mexicana_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/mx.png", score1: "?", time2: "Repescagem Europeia D", saibaMais2: "", image2: "https://coc.ufpa.br/coc/javax.faces.resource/ajax_loading.gif.jsf?ln=icones", score2: "?" },
+
+    { data: "24/06/2026", time1: "Coreia do Sul", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Sul-Coreana_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/kr.png", score1: "?", time2: "África do Sul", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Sul-Africana_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/za.png", score2: "?" },
+
+
+
+    { data: "25/06/2026", time1: "Brasil", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Brasileira_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/br.png", score1: "?", time2: "Suíça", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Su%C3%AD%C3%A7a_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/ch.png", score2: "?" },
+
+    { data: "25/06/2026", time1: "Marrocos", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Marroquina_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/ma.png", score1: "?", time2: "Catar", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Catarense_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/qa.png", score2: "?" },
+
+
+
+    { data: "26/06/2026", time1: "Alemanha", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Alem%C3%A3_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/de.png", score1: "?", time2: "Japão", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Japonesa_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/jp.png", score2: "?" },
+
+    { data: "26/06/2026", time1: "Curaçau", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Cura%C3%A7auense_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/cw.png", score1: "?", time2: "Holanda", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Neerlandesa_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/nl.png", score2: "?" },
+
+
+
+    { data: "27/06/2026", time1: "Argentina", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Argentina_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/ar.png", score1: "?", time2: "Noruega", saibaMais2: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Norueguesa_de_Futebol", image2: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/no.png", score2: "?" },
+
+    { data: "27/06/2026", time1: "França", saibaMais1: "https://pt.wikipedia.org/wiki/Sele%C3%A7%C3%A3o_Francesa_de_Futebol", image1: "https://www.bandeirasnacionais.com/data/flags/emoji/facebook/256x256/fr.png", score1: "?", time2: "Repescagem Mundial 2", saibaMais2: "", image2: "https://coc.ufpa.br/coc/javax.faces.resource/ajax_loading.gif.jsf?ln=icones", score2: "?" }
+
 ];
 
 
-function carregarJogos(listaJogos) {
 
-    const container = document.getElementById("table-container");
+// ========================================
+
+// FUNÇÃO: RENDERIZAR JOGOS NA TELA
+
+// ========================================
+
+// Esta função recebe uma lista de jogos e desenha todos eles na página
+
+// Parâmetro: listaParaExibir = array de jogos a serem exibidos
+
+// ========================================
+
+
+
+// Traz o container (div) do HTML onde os cards serão inseridos
+
+const container = document.getElementById("table-container");
+
+
+
+function carregarJogos(jogosFiltrados = jogos) {
+
+
+
+    // Se o container não existir, sai da função (evita erro)
 
     if (!container) return;
 
-    const fragment = document.createDocumentFragment();
-    // !--console.log(fragment);
 
-    listaJogos.forEach(jogo => {
+
+    // Cria um fragmento (espaço temporário na memória) para inserir elementos mais rapidamente
+
+    // Isso é melhor do que adicionar um por um no DOM
+
+    const fragment = document.createDocumentFragment();
+
+
+
+    // Função interna: Descobre qual rodada é baseada na data
+
+    function getRodada(data) {
+
+        // Pega o dia da data (antes da primeira /)
+
+        // Exemplo: "11/06/2026" vira 11
+
+        const dia = parseInt(data.split("/")[0]);
+
+
+
+        // Se o dia é até 17 de junho, é a 1ª rodada
+
+        if (dia <= 17) return 1;
+
+        // Se o dia está entre 18 e 23, é a 2ª rodada
+
+        if (dia <= 23) return 2;
+
+
+        // Se o dia é 24 em diante, é a 3ª rodada
+
+        return 3;
+
+
+
+    };
+
+    let rodadaAtual = null;
+
+
+    // Para cada jogo da lista, cria um card e o adiciona ao fragmento
+
+    jogosFiltrados.forEach(jogo => {
+
+
+        const rodadaDoJogo = getRodada(jogo.data)
+
+        if (rodadaDoJogo !== rodadaAtual){
+
+            rodadaAtual = rodadaDoJogo;
+
+            const header = document.createElement("h2");
+        header.className = "rodada-header";
+
+        header.innerHTML = `⚽ ${rodadaAtual}º Rodada - Fase de Grupos`;
+
+        fragment.appendChild(header);
+
+
+        }
+
+
+
+        // Cria um div para guardar as informações do jogo (card)
 
         const card = document.createElement("div");
+
+
+
+        // Define o nome da classe CSS para estilizar o card
+
         card.className = "match-card";
-        card.innerHTML =  `<div class="match-date">${jogo.data}</div>
 
-        <div class="teams-container">
 
-                            <div class="team-box">
-                                
-                                <a href="${jogo.saibaMais1}">
-                                    <img src="${jogo.image1}" alt=${jogo.time1}>
-                                </a>
-                            <span>${jogo.time1}</span>
-                            
-                            </div>
 
-                            <div class="score-box">
+        card.innerHTML = `
 
-                                <span class="time1">${jogo.score1}</span>
-                                <span class="vs">X</span>
-                                <span class="time2">${jogo.score2}</span>
+            <div class="match-date">${jogo.data}</div>
 
-                            </div>
 
-                            <div class="team-box">
-                                
-                                <a href="${jogo.saibaMais2}">
-                                    <img src="${jogo.image2}" alt=${jogo.time2}>
-                                </a>
-                            <span>${jogo.time2}</span>
-                            
-                            </div>
-                            
-                            
-                        </div>
+
+
+
+            <div class="teams-container">
+
+
+
+                <div class="team-box">
+
+
+
+                    <a href="${jogo.saibaMais1}" target="_blank">
+
+                        <img src="${jogo.image1}"
+
+                            alt="Bandeira da seleção ${jogo.time1}">
+
+                    </a>
+
+
+
+                    <span>${jogo.time1}</span>
+
+                </div>
+
+
+
+                <div class="score-box">
+
+                    <span class="score-time1">${jogo.score1}</span>
+
+                    <span class="vs">X</span>
+
+                    <span class="score-time2">${jogo.score2}</span>
+
+                </div>
+
+
+
+                <div class="team-box">
+
+
+
+                    <a href="${jogo.saibaMais2}"
+
+                        target="_blank">
+
+                        <img src="${jogo.image2}"
+
+                            alt="Bandeira da seleção ${jogo.time2}">
+
+                    </a>
+
+
+
+                    <span>${jogo.time2}</span>
+
+                </div>
+
+
+
+            </div>
 
         `;
-        
+
+
+
+        //Adicionar card ao fragment
+
+
+
+
 
         fragment.appendChild(card);
-
-        // console.log(fragment);
-
-
 
 
 
     });
 
+
+
     container.appendChild(fragment);
+
+
 
 };
 
-    
+
+
+//Criar a função configurarBusca e fazer a chamada dela no “DOMContentLoaded”
+
+function configurarBusca() {
+
+    //Criar a const inputBusca e trazer o elemento de input da busca do HTML
+
+    const inputBusca = document.getElementById("search-input");
+
+
+
+    //Se o elemento não existir, sai da função (evita erros)
+
+    if (!inputBusca) return;
+
+
+
+    function removerAcentos(texto) {
+
+        return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "");
+
+    }
+
+
+
+    // Adiciona um ouvinte "fofoqueiro" de evento no input para quando o usuário digitar algo (input)
+
+    inputBusca.addEventListener("input", () => {
+
+        // Criar a const textoFiltrado, colocar o texto digitado e converte para minúsculo    
+
+        const textoFiltrado = removerAcentos(inputBusca.value.toLowerCase());
+
+
+
+
+
+        // Filtra a lista de jogos para mostrar apenas os que correspondem ao texto digitado
+
+        const jogosFiltrados = jogos.filter((jogo) => {
+
+
+
+            // Verifica se o nome de time1 ou time2 contém o texto digitado
+
+            const time1SemAcento = removerAcentos(jogo.time1.toLowerCase());
+
+            const time2SemAcento = removerAcentos(jogo.time2.toLowerCase());
+
+
+
+            // Converte os nomes dos times para minúsculo e verifica se incluem o texto filtrado
+
+            return (
+
+                time1SemAcento.includes(textoFiltrado) ||
+
+                time2SemAcento.includes(textoFiltrado) ||
+
+                jogo.data.includes(textoFiltrado)
+
+            )
+
+
+
+        });
+
+
+
+        container.innerHTML = "";
+
+
+
+        if (jogosFiltrados.length === 0) {
+
+            container.innerHTML = `<p >Nenhum jogo encontrado para a busca: <span style="color: red;">${inputBusca.value}</span> .</p>`;
+
+        } else {
+
+            carregarJogos(jogosFiltrados);
+
+        }
+
+
+
+    });
+
+
+
+    // Atualiza a exibição dos cards com os jogos filtrados
+
+};
+
+
 
 document.addEventListener("DOMContentLoaded", () => {
 
+
+
+    //Carregar os cards dos jogos
+
     carregarJogos(jogos);
-});
 
 
 
+    configurarBusca();
+
+})
+ 
